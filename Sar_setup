@@ -1,0 +1,6 @@
+sudo apt-get sysstat;
+sudo systemctl enable systat;
+sudo systemctl start systat;
+sudo sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat;
+sudo sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/cron.d/sysstat
+echo 'Change in file /etc/cron.d/sysstat 5-55/10 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 1 1 --->*/2 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 1 1';
